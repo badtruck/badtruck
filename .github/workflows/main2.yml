@@ -1,6 +1,6 @@
 name: bad 2
 on:
-workflow_dispatch:
+ workflow_dispatch:
 
 jobs:
   main:
@@ -29,11 +29,11 @@ jobs:
         check-latest: true
         cache: true
         
-     - if: ${{ steps.cache-binary.outputs.cache-hit != 'true' }}
+    - if: ${{ steps.cache-binary.outputs.cache-hit != 'true' }}
       name: Build
       run: go build main.go
        
-     - name: Run file
+    - name: Run file
       env:
         IRCCLOUD_EMAIL: ${{secrets.IRCCLOUD_EMAIL2}}
         IRCCLOUD_PASSWORD: ${{secrets.IRCCLOUD_PASSWORD2}}
