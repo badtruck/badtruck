@@ -1,4 +1,4 @@
-gggggname: bad 14
+name: bad 14
 on:
  workflow_dispatch:
 
